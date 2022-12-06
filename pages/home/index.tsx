@@ -2,12 +2,13 @@ import cn from 'classnames';
 import styles from './index.module.scss';
 
 import ELLink from '@/Components/ELLink';
-
 import { IconBrandLinkedin } from '@/Assets/IconBrandLinkedin';
+import { IconExternalLink } from '@/Assets/IconExternalLink';
 import { IconBrandGithub } from '@/Assets/IconBrandGithub';
+import { translate } from '@/Helpers/localizationHelper';
 import { IconMapPinSvg } from '@/Assets/IconMapPin';
-import { IconMail } from '@/Assets/IconMail';
 import ELHeadline from '@/Components/ELHeadline';
+import { IconMail } from '@/Assets/IconMail';
 import { Base } from '@/Constants/base';
 
 const HomePage = () => {
@@ -18,6 +19,9 @@ const HomePage = () => {
           <div className="row">
             <div className="col-12">
               <h1 className={styles.headTitle}>Eda Lökoğlu</h1>
+              <h4 className={styles.headSub}>
+                Front-End Developer (Junior - Entry Level)
+              </h4>
             </div>
             <div className="col-12">
               <nav className={styles.skillList}>
@@ -55,7 +59,7 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <ELHeadline>Education</ELHeadline>
+              <ELHeadline>{translate('education')}</ELHeadline>
             </div>
             <div className="col-12">
               <div className={styles.list}>
@@ -77,16 +81,16 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <ELHeadline>Skills</ELHeadline>
+              <ELHeadline>{translate('skills')}</ELHeadline>
             </div>
             <div className="col-12">
               <div className={styles.list}>
                 <div className={styles.item}>
-                  <div className={styles.text}>Python</div>
+                  <div className={styles.text}>React</div>
                   <div className={styles.degree}>
                     <span className={cn(styles.circle, styles.active)}></span>
                     <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={styles.circle}></span>
                     <span className={styles.circle}></span>
                     <span className={styles.circle}></span>
                   </div>
@@ -96,27 +100,7 @@ const HomePage = () => {
                   <div className={styles.degree}>
                     <span className={cn(styles.circle, styles.active)}></span>
                     <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={styles.circle}></span>
-                    <span className={styles.circle}></span>
-                    <span className={styles.circle}></span>
-                  </div>
-                </div>
-                <div className={styles.item}>
-                  <div className={styles.text}>Deep Learning</div>
-                  <div className={styles.degree}>
                     <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={styles.circle}></span>
-                    <span className={styles.circle}></span>
-                    <span className={styles.circle}></span>
-                  </div>
-                </div>
-                <div className={styles.item}>
-                  <div className={styles.text}>MySQL</div>
-                  <div className={styles.degree}>
-                    <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={styles.circle}></span>
                     <span className={styles.circle}></span>
                     <span className={styles.circle}></span>
                   </div>
@@ -132,7 +116,7 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className={styles.item}>
-                  <div className={styles.text}>Excel</div>
+                  <div className={styles.text}>HTML</div>
                   <div className={styles.degree}>
                     <span className={cn(styles.circle, styles.active)}></span>
                     <span className={cn(styles.circle, styles.active)}></span>
@@ -142,13 +126,43 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className={styles.item}>
+                  <div className={styles.text}>CSS</div>
+                  <div className={styles.degree}>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={styles.circle}></span>
+                    <span className={styles.circle}></span>
+                    <span className={styles.circle}></span>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <div className={styles.text}>Javascript</div>
+                  <div className={styles.degree}>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={styles.circle}></span>
+                    <span className={styles.circle}></span>
+                    <span className={styles.circle}></span>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <div className={styles.text}>Excel</div>
+                  <div className={styles.degree}>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={styles.circle}></span>
+                  </div>
+                </div>
+                <div className={styles.item}>
                   <div className={styles.text}>Statistical Analysis</div>
                   <div className={styles.degree}>
                     <span className={cn(styles.circle, styles.active)}></span>
                     <span className={cn(styles.circle, styles.active)}></span>
                     <span className={cn(styles.circle, styles.active)}></span>
-                    <span className={styles.circle}></span>
-                    <span className={styles.circle}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
+                    <span className={cn(styles.circle, styles.active)}></span>
                   </div>
                 </div>
               </div>
@@ -160,20 +174,36 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <ELHeadline>Certificates</ELHeadline>
+              <ELHeadline>{translate('certificates')}</ELHeadline>
             </div>
             <div className="col-12">
               <div className={styles.list}>
                 <div className={styles.item}>
-                  <div className={styles.title}>
+                  <ELLink
+                    href="https://verified.cv/en/verify/48177150601079"
+                    target={'_blank'}
+                    className={styles.title}>
                     Data Science for Public Good Program - Ankara
-                  </div>
+                    <IconExternalLink
+                      width={20}
+                      height={20}
+                      className={styles.icon}
+                    />
+                  </ELLink>
                   <div className={styles.desc}>Kodluyoruz</div>
                 </div>
                 <div className={styles.item}>
-                  <div className={styles.title}>
+                  <ELLink
+                    href="https://verified.cv/en/verify/09614659174662"
+                    target={'_blank'}
+                    className={styles.title}>
                     Introduction to Machine Learning
-                  </div>
+                    <IconExternalLink
+                      width={20}
+                      height={20}
+                      className={styles.icon}
+                    />
+                  </ELLink>
                   <div className={styles.desc}>Global Al Hub</div>
                 </div>
                 <div className={styles.item}>
@@ -202,13 +232,13 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <ELHeadline>Languages</ELHeadline>
+              <ELHeadline>{translate('languages')}</ELHeadline>
             </div>
             <div className="col-12">
               <div className={styles.list}>
                 <div className={styles.item}>
                   <div className={styles.title}>English</div>
-                  <div className={styles.desc}>Beginner (B1,1)</div>
+                  <div className={styles.desc}>Beginner (B1, +1)</div>
                 </div>
                 <div className={styles.item}>
                   <div className={styles.title}>Turkish</div>
@@ -223,7 +253,7 @@ const HomePage = () => {
           <div className="row">
             <div className="col-12">
               <div className="col-12">
-                <ELHeadline>Professional Experience</ELHeadline>
+                <ELHeadline>{translate('professional.experience')}</ELHeadline>
               </div>
               <div className="col-12">
                 <div className={styles.list}>
@@ -233,7 +263,7 @@ const HomePage = () => {
                     </div>
                     <div className={styles.text}>
                       <b>Data Science for Public Good,</b>
-                      <span>CADS@TEDU and Kodluyoruz</span>
+                      <span> CADS@TEDU and Kodluyoruz</span>
                       <br />
                       <br />
                       <p>
@@ -282,19 +312,18 @@ const HomePage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <ELHeadline>Profile</ELHeadline>
+              <ELHeadline>{translate('profile')}</ELHeadline>
             </div>
             <div className="col-12">
               <article className={styles.text}>
-                My goal for my whole life is to improve myself and learn new
-                things. With every new information I've learned, I've discovered
-                myself. Every piece of information I've learned in my life has
-                led to me. I have the perspective of pushing the boundaries of
-                my potential and being the best I can be. I've always been a
-                solution-oriented person in the obstacles I've encountered. I
+                My goal throughout my life has been to improve myself. Every new
+                piece of information I learned opened a new page in my life. I
+                strived to have the perspective of pushing the limits of my
+                potential and being the best I could be. I've always been a
+                solutionoriented person in the obstacles I've encountered. I
                 learned from my problems, and never gave up. The most important
                 thing for me in my work life is a good team, team spirit, and a
-                good teammate. My goal in the business world is to ensure
+                good colleague. My goal in the business world is to ensure
                 availability and efficiency in projects I will always contribute
               </article>
             </div>
